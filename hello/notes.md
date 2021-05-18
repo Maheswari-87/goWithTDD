@@ -1,5 +1,5 @@
 # TDD in Go
-Test Driven Development (TDD) is a skill that needs practice to develop but by being able to break problems down into smaller components that you can test, you will have a much easier time writing software.
+Test-Driven development (TDD) is a process of developing and running automated test before actual development of the application. It is a skill that needs practice to develop but by being able to break problems down into smaller components that you can test, you will have a much easier time writing software.
 
 ## Writing a test is just like writing a function, we have to follow some rules to write a test:
 1. It needs to be in a file with a name like xxx_test.go
@@ -19,3 +19,10 @@ Test Driven Development (TDD) is a skill that needs practice to develop but by b
 1. Add more test cases for new requirements
 1. Refactor the code to fulfill the requirements
 1. Repeat the same procedure to add more requirements from step1
+
+## functions used
+### t.Helper()
+It is needed to tell the test suite that this method is a helper. By doing this when it fails the line number reported will be in our function call rather than inside our test helper. This will help other developers track down problems easier
+
+### t.Errof()
+We are calling the Errorf method on our t which will print out a message and fail the test. The f stands for format which allows us to build a string with values inserted into the placeholder values %q. When you made the test fail it should be clear how it works.
