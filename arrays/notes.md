@@ -23,9 +23,9 @@
 1. Now again create one more test which calls a function that takes multiple slices and adds each slice values, and returns the sum of each slice in a different slice.
 1. Now test it, we will receive compilation error for not having function.
 1. Write a variadic function that can take a variable number of arguments
-* func SumAll(numbersToSum ...[]int) (sums []int) {
-*    return
-* }
+- func SumAll(numbersToSum ...[]int) (sums []int) {
+-    return
+- }
 
 1. Now test it by using go test command.
 1. Still our test fails, as we can’t use equality operator on slices, So here we can use reflect.DeepEqual which is useful for seeing if any two variables are the same like below.
@@ -37,8 +37,8 @@
 1. We can also create slice by using make like below where sums is slice variable.
 - sums := make ([] int, lengthOfNumbers)
 1. You can use the append function which takes a slice and a new value, returning a new slice with all the items in it
-	- var sums [] int
-        - sums = append (sums, Sum(numbers))
+- var sums [] int
+- sums = append (sums, Sum(numbers))
 1. we can test the coverage of our test by using " go test -cover "
 1. Now our next requirement is to change SumAll to SumAllTails, where it now calculates the totals of the "tails" of each slice. The tail of a collection is all the items apart from the first one (the "head")
 1. Write the test where it returns sum of tails of slices, and test it.
