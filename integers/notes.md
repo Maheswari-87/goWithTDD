@@ -6,3 +6,5 @@
 1.	Again run go test, now test will fail as it returns the sum as 0
 1.	Refactor the code to return proper result of sum.
 1.	Now test the code again, and we are good to see the test has passed.
+1.  Add ExampleAdd function in integers_test.go, which meant to display in godocumentation for reference purpose, if we remove comment then the output will not come in documentation.
+1.  Add more requirements and refactor the code according to it.

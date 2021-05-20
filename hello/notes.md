@@ -26,3 +26,8 @@ It is needed to tell the test suite that this method is a helper. By doing this 
 
 ### t.Errof()
 We are calling the Errorf method on our t which will print out a message and fail the test. The f stands for format which allows us to build a string with values inserted into the placeholder values %q. When you made the test fail it should be clear how it works.
+### godoc
+1. we can have documentation fo our package by using this godoc.
+1. we can install it manually by using "go get golang.org/x/tools/cmd/godoc"
+1. Now run "godoc -http :8000"
+1. So now we can acces our documentation in browser by using "http://localhost:8000/pkg/goWithTesting/integers/"
