@@ -23,19 +23,19 @@
 1. Now again create one more test which calls a function that takes multiple slices and adds each slice values, and returns the sum of each slice in a different slice.
 1. Now test it, we will receive compilation error for not having function.
 1. Write a variadic function that can take a variable number of arguments
-     -    func SumAll(numbersToSum ...[]int) (sums []int) {
-        -           return
-        - }
+* func SumAll(numbersToSum ...[]int) (sums []int) {
+*    return
+* }
 
 1. Now test it by using go test command.
 1. Still our test fails, as we can’t use equality operator on slices, So here we can use reflect.DeepEqual which is useful for seeing if any two variables are the same like below.
-       - if !reflect.DeepEqual (got, want) {
-        -    t.Errorf ("got %v want %v", got, want)
-       - }
+- if !reflect.DeepEqual (got, want) {
+-    t.Errorf ("got %v want %v", got, want)
+- }
 1. we have to import reflect to access reflect.DeepEqual, and It's important to note that   reflect.DeepEqual is not "type safe", the code will compile even if you did something a bit silly
 1. Now we need to do is iterate over the varargs, calculate the sum using our Sum function     from before and then add it to the slice we will return
 1. We can also create slice by using make like below where sums is slice variable.
-	sums := make ([] int, lengthOfNumbers)
+- sums := make ([] int, lengthOfNumbers)
 1. You can use the append function which takes a slice and a new value, returning a new slice with all the items in it
 	- var sums [] int
         - sums = append (sums, Sum(numbers))
