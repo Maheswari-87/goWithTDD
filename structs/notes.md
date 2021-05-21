@@ -10,10 +10,10 @@ We are going to find perimeter of rectangle here.
 1.	So the best solution for this is to create a struct of type Rectangle.
 1.	Struct: Struct is a named collection of fields where we can store data.
 1.	Create a struct like below
-#### type Rectangle struct {
-####     W float64
-####     H float64
-#### }
+> type Rectangle struct {
+-    W float64
+-    H float64
+> }
 1.	Change the test file to access struct and assign values, now test the function, it will show error as not enough arguments in call.
 1.	Now change the functions to access struct and its values by using dot(.) operator
 1.	Now add a test to get area of circle, and test it, we will get Compilation error as Circle struct undefined.
@@ -23,7 +23,7 @@ We are going to find perimeter of rectangle here.
 ##	Method
  A method is a function with a receiver. A method declaration binds an identifier, the method name, to a method, and associates the method with the receiver's base type.
 ####	Syntax:
-####	func (receiverName ReceiverType) MethodName(args)
+>	func (receiverName ReceiverType) MethodName(args)
 1.	Change the test to call method by using an instance
 1.	If we test our code now, we will get error as rectangle. Area undefined (type Rectangle has no field or method Area) same for circle also.
 1.	So let’s create related methods which returns 0.
@@ -37,7 +37,7 @@ We are going to find perimeter of rectangle here.
 ##	Interface: 
 These are a very powerful concept in statically typed languages like Go because they allow you to make functions that can be used with different types and create highly-decoupled code while still maintaining type-safety
 #### Syntax: 
-#### type Shape interface {}
+> type Shape interface {}
 1. 	In test file, we need to create a helper function which takes Shape, If we try to call this with something that isn't a shape, then it will not compile.
 1.	 Now create a shape interface which has method Area that return float64.
 1.	So according to shape the area method will be called from interface.
