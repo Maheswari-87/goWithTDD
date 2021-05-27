@@ -47,3 +47,14 @@ These are a very powerful concept in statically typed languages like Go because 
 1.	Change our test file into table driven tests, by creating an anonymous struct which will have all the fields that we need, and then iterate over the struct using range loop, and check for expected output.
 1.	The table driven tests makes it very easy to add a new test case, also Table based tests to make your assertions(errors) clearer and your suites easier to extend & maintain
 1.	We can also test each test by using  “go test -run TestArea/Rectangle”
+
+## Learned from this Chapter
+
+1. This was more TDD practice, iterating over our solutions to basic mathematic problems and learning new language features motivated by our tests.
+1. Declaring structs to create your own data types which lets you bundle related data together and make the intent of your code clearer
+1. Declaring interfaces so you can define functions that can be used by different types (parametric polymorphism)
+1. Adding methods so you can add functionality to your data types and so you can implement interfaces
+Table based tests to make your assertions clearer and your suites easier to extend & maintain
+This was an important chapter because we are now starting to define our own types. In statically typed languages like Go, being able to design your own types is essential for building software that is easy to understand, to piece together and to test.
+1. Interfaces are a great tool for hiding complexity away from other parts of the system. In our case our test helper code did not need to know the exact shape it was asserting on, only how to "ask" for its area.
+As you become more familiar with Go you start to see the real strength of interfaces and the standard library. You'll learn about interfaces defined in the standard library that are used everywhere and by implementing them against your own types you can very quickly re-use a lot of great functionality.

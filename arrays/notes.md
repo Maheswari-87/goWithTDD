@@ -49,3 +49,15 @@
 1. Write the test for an empty slice and test it, we will get error saying:
 panic: runtime error: slice bounds out of range [recovered], panic: runtime error: slice bounds out of range
 1. Refactor the code to accept 0 slice and return 0.
+
+## Learned from this Chapter
+* Arrays
+* Slices
+* The various ways to make them
+* How they have a fixed capacity but you can create new slices from old ones
+* using append
+* How to slice, slices!
+* len to get the length of an array or slice
+* Test coverage tool(go test -cover)
+* reflect.DeepEqual and why it's useful but can reduce the type-safety of your code
+* We've used slices and arrays with integers but they work with any other type too, including arrays/slices themselves. So you can declare a variable of [][]string if you need to.

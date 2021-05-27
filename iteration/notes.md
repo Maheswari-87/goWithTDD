@@ -20,3 +20,7 @@ For loop doesnot require parentheses surrounding the three components of the for
                 ok      iteration       1.316s
 1.  Now as an exercise Change the test so a caller can specify how many times the character is repeated and then fix the code
 1.	Add more test cases as per requirement and refactor the code to pass.
+
+## Learned from this chapter
+* Learned for
+* Learned how to write benchmarks
