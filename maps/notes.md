@@ -7,10 +7,11 @@
 1.	Here key should be unique and value can be duplicated.
 1.	Now test it, it will fail because of unexpected output.
 1.	Add proper return statement to return the string
+1.  Getting a value out of a Map is the same as getting a value out of Array map[key]
 1.	Now make the test file clean by adding a function to check got and want results(assertStrings)
 1.	Also change the test file by Calling Dictionary(of type map[string]string) with the data, and with this reference variable call Search function.
 1.	Change the search function to a method by adding Dictionary type as method to it.
-1.	Now write one more test, where we have write test case if word is not there and check for error, it should be there.Then test it.
+1.	Now write one more test, where we have to write test case if word is not there, The way to handle this scenario in Go is to return a second argument which is an Error type.  and Errors can be converted to a string with the .Error() method in go. check for error, it should be there beacuase the word is not present,Then test it.
 1.	Add error return statement in the code, and return nil.
 1.	In order to make this pass, we are using an interesting property of the map lookup. It can return 2 values. The second value is a boolean which indicates if the key was found successfully.
 1.	This property allows us to differentiate between a word that doesn't exist and a word that just doesn't have a definition
