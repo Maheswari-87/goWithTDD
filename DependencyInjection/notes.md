@@ -1,4 +1,5 @@
 # TDD with Dependency injection
+1. In Go, interfaces enable us to use dependency inversion. We are able to use different implementations in our code, as long as they satisfy the interface we have defined. We use dependency injection to tell the application which implementation to use.
 1.	We want to write a function that greets someone, just like we did in the hello-world chapter but this time we are going to be testing the actual printing.
 1.	But how can we test this? Calling fmt.Printf prints to stdout, which is pretty hard for us to capture using the testing framework.
 1.	What we need to do is to be able to inject (which is just a fancy word for pass in) the dependency of printing
